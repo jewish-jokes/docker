@@ -40,14 +40,15 @@
         </div>
         <div class="col-lg-4">
             <p>
-                <form action="/penguins/addpenguin" method="post">
-                    <div class="caption">Enter Your Penguin</div>
-                    <input type="text" placeholder="Penguin Name" name="name" <%=penguins[i].name; %>
-                    <input type="text" placeholder="Penguin Color" name="color" <%=penguins[i].color; %>
-                    <button type="submit">Submit</button>
-                </form>
+               <div class="caption">Your Penguins</div>
+                   <ul>
+                      <% penguins.forEach(function(penguins) { %>
+                         <p>Name: <%= penguins.name %></p>
+                         <p>Color: <%= penguins.color %></p>
+                      <% }); %>
+                   </ul>
             </p>
-        </div> 
+        </div>
     </div>
 </div>
 
