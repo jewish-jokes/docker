@@ -1,8 +1,8 @@
 FROM node:18-alpine
 
-RUN mkdir -p /home/node/my-app/ && chown -R node:node /home/node/my-app
+RUN mkdir -p /home/node/app/ && chown -R node:node /home/node/app
 
-WORKDIR /home/node/my-app
+WORKDIR /home/node/app
 
 COPY --chown=node:node ["package-lock.json", "package.json", "./"]
 
